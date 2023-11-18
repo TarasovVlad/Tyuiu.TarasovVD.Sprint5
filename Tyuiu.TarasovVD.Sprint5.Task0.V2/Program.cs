@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Tyuiu.TarasovVD.Sprint5.Task0.V2.Lib;
+using System.IO;
 
 namespace Tyuiu.TarasovVD.Sprint5.Task0.V2
 {
@@ -21,7 +22,9 @@ namespace Tyuiu.TarasovVD.Sprint5.Task0.V2
             Console.WriteLine("* Выполнил: Тарасов Владислав Денисович | ПКТб-23-2                       *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Написать программу на C# по заданным условиям.                          *");
+            Console.WriteLine("* Дано выражение y = e^x / x  вычислить его значение при x = 3,           *");
+            Console.WriteLine("* результат сохранить в текстовый файл OutPutFileTask0.txt и вывести      *");
+            Console.WriteLine("* на консоль. Округлить до трёх знаков после запятой.                     *");
             DataService ds = new DataService();
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ                                                         *");
@@ -34,6 +37,12 @@ namespace Tyuiu.TarasovVD.Sprint5.Task0.V2
             string res = ds.SaveToFileTextData(x);
             Console.WriteLine("Файл: " + res);
             Console.WriteLine("Создан!");
+            using (StreamReader reader = new StreamReader(res))
+            {            
+                string result = reader.ReadToEnd();
+                Console.WriteLine("Значение выражения = ");
+                Console.WriteLine(result);
+            }
             Console.ReadKey();
         }
     }
