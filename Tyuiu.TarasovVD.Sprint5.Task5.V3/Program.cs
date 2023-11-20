@@ -22,7 +22,7 @@ namespace Tyuiu.TarasovVD.Sprint5.Task5.V3
             Console.WriteLine("* Выполнил: Тарасов Владислав Денисович | ПКТб-23-2                       *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Дан файл С:DataSprint5InPutDataFileTask5V3.txt (файл взять из архива     ");
+            Console.WriteLine("* Дан файл С:DataSprint5InPutDataFileTask5V3.txt (файл взять из архива    *");
             Console.WriteLine("* согласно вашему варианту. Создать папку в ручную С:DataSprint5 и        *");
             Console.WriteLine("* скопировать в неё файл) в котором есть набор значений. Найти сумму      *");
             Console.WriteLine("* всех целых чисел в файле. Полученный результат вывести на консоль. У    *");
@@ -31,12 +31,14 @@ namespace Tyuiu.TarasovVD.Sprint5.Task5.V3
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ                                                         *");
             Console.WriteLine("***************************************************************************");
-            
+            string path = @"C:\DataSprint5\InPutDataFileTask5V3.txt";
+            Console.WriteLine("Данные находятся в файле: " + path);
             Console.WriteLine();
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
-            
+            double res = ds.LoadFromDataFile(path);
+            Console.WriteLine("Сумма элементов файла = " + res);
 
 
 
