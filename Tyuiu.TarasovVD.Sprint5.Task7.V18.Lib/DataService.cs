@@ -25,7 +25,7 @@ namespace Tyuiu.TarasovVD.Sprint5.Task7.V18.Lib
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    line = line.Replace("нн", "н");
+                    line = line.Replace("н", "нн");
 
                     for (int i = 0; i < line.Length; i++)
                     {
